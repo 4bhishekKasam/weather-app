@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Input } from "semantic-ui-react";
+import "./SearchForm.css";
 
 export default class SearchForm extends Component {
   constructor(props) {

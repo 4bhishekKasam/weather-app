@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchForm from "./components/SearchForm/SearchForm";
 import Header from "./components/Header/Header";
+import WeatherInfo from "./components/WeatherInfo/WeatherInfo";
 import "./App.css";
 
 const API_KEY = "e1fa1058d81ff910c3bef4a951a0c038";
@@ -32,7 +33,7 @@ class App extends Component {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`;
       const apiResponse = await fetch(url);
       const data = await apiResponse.json();
-     // debugger;
+      // debugger;
       if (data.cod === "404") {
         this.setState({ error: "data not found" });
       } else {
@@ -45,8 +46,8 @@ class App extends Component {
           description: data.weather[0].description,
           icon: data.weather[0].icon,
           humidity: data.main.humidity,
-          minTemp: data.main.temp.min,
-          maxTemp: data.main.temp.max
+          minTemp: data.main.temp_min, 
+          maxTemp: data.main.temp_max
         });
       }
     } else {
@@ -74,6 +75,18 @@ class App extends Component {
       >
         <Header />
         <SearchForm getWeather={this.getWeather} />
+        <WeatherInfo
+          city={this.state.city}
+          country={this.state.country}
+          temperature={this.state.temperature}
+          error={this.state.error}
+          description={this.state.description}
+          icon={this.state.icon}
+          humidity={this.state.humidity}
+          minTemp={this.state.minTemp}
+          maxTemp={this.state.maxTemp}
+          today={this.state.today}
+        />
       </div>
     );
   }

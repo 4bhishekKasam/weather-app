@@ -1,7 +1,7 @@
 .search-form {
   width: 100%;
   margin-bottom: 1.2rem;
-  border: 0.1px solid yellowgreen;
+  border: 0px solid yellowgreen;
 }
 
 .container-form {
@@ -14,7 +14,7 @@
   height: 60px;
   margin: 0 auto;
   padding: 0 4rem;
-  border: 0.1px solid pink;
+  border: 0px solid pink;
   text-align: center;
 }
 .search-form-item input[type="text"] {

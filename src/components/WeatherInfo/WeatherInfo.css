@@ -1,0 +1,39 @@
+.weather-info-wrapper {
+  width: 100%;
+  height: 30rem;
+  margin: 0 auto;
+  border: 0px dotted greenyellow;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  font-size: 3.2rem;
+  text-align: center;
+}
+.weather-info-temperature {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 6rem;
+  color: #ebebeb;
+  font-family: "lato", sans-serif;
+  text-align: center;
+  height: 150px;
+  padding-top: 70px;
+}
+.weather-info-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ebebeb;
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 1px;
+  margin: 0 25%;
+  border: 0px solid rgb(211, 199, 195);
+}
+.weather-info-icon {
+  width: 2rem;
+  height: 2rem;
+}
